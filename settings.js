@@ -11,7 +11,7 @@ module.exports = {
         type: "credentials",
         users: [{
             username: "admin",
-            password: "admin", // this is a hashed password "password"
+            password: "$2b$08$Qz8V4sQGeyXZLCnqJx0tMONbMmNTtrSZjQcyLAQfA/s.wKLdTsn1S", // default password: admin
             permissions: "*"
         }]
     },
