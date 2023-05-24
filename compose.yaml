@@ -1,7 +1,6 @@
 version: '3'
 services:
   mosquitto:
-    name: mosquitto
     image: eclipse-mosquitto
     volumes:
       - ~/DockerVolumes/Mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
@@ -12,7 +11,6 @@ services:
       - iot-network
 
   mysql:
-    name: mysql
     image: mysql:latest
     volumes:
       - ~/DockerVolumes/MySQL/config/my.cnf:/etc/mysql/my.cnf
@@ -25,10 +23,9 @@ services:
       - iot-network
 
   nodered:
-    name: nodered
     image: nodered/node-red:latest
     volumes:
-      - ~/DockerVolumes/NodeRED/config/settings.js:/data/settings.js
+      #- ~/DockerVolumes/NodeRED/config/settings.js:/data/settings.js
       - ~/DockerVolumes/NodeRED/data:/data
     ports:
       - "1880:1880"
